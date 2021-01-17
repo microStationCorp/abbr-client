@@ -6,6 +6,7 @@ const ResultData = () => {
     { keyWord: "ABP", value: "Ananda Bazar Patrika" },
     { keyWord: "IB", value: "Intellegince bureau" },
     { keyWord: "CP", value: "Compressor" },
+    { keyWord: "BP", value: "Brake Pressure" },
   ];
   return (
     <>
