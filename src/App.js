@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <Grid container justify="center">
+      <Grid container justify="center" >
         <SearchForm />
         <ResultData />
       </Grid>

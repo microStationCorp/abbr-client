@@ -6,12 +6,16 @@ const SearchForm = () => {
 
   const handleSearchButton = () => {
     console.log(searchVal);
-    setSearchVal("")
+    setSearchVal("");
   };
 
   return (
     <>
-      <Grid item xs={10} style={{ margin: "10px 0px" }}>
+      <Grid
+        item
+        xs={10}
+        style={{ margin: "10px 0px" }}
+      >
         <Grid container justify="center" spacing={2}>
           <Grid item xs={12} sm={8}>
             <TextField
@@ -23,7 +27,7 @@ const SearchForm = () => {
               onChange={(e) => setSearchVal(e.target.value)}
             />
           </Grid>
-          <Grid item xs={4} sm={2}>
+          <Grid item xs={4} sm={1}>
             <Button
               variant="contained"
               color="primary"
