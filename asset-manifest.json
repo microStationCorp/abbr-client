@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/abbr-client/static/js/main.cd91ce6d.chunk.js",
+    "main.js.map": "/abbr-client/static/js/main.cd91ce6d.chunk.js.map",
+    "runtime-main.js": "/abbr-client/static/js/runtime-main.12c6e75c.js",
+    "runtime-main.js.map": "/abbr-client/static/js/runtime-main.12c6e75c.js.map",
+    "static/js/2.a3aeba96.chunk.js": "/abbr-client/static/js/2.a3aeba96.chunk.js",
+    "static/js/2.a3aeba96.chunk.js.map": "/abbr-client/static/js/2.a3aeba96.chunk.js.map",
+    "index.html": "/abbr-client/index.html",
+    "static/js/2.a3aeba96.chunk.js.LICENSE.txt": "/abbr-client/static/js/2.a3aeba96.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.12c6e75c.js",
+    "static/js/2.a3aeba96.chunk.js",
+    "static/js/main.cd91ce6d.chunk.js"
+  ]
+}
