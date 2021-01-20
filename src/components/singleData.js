@@ -8,10 +8,15 @@ const SingleData = ({ data, value }) => {
         elevation={1}
         style={{ margin: "5px 0px", padding: "5px" }}
       >
-        <Typography style={{ color: "#085CAB", fontWeight: "bold" }}>
+        <Typography
+          align="center"
+          style={{ color: "#085CAB", fontWeight: "bold" }}
+        >
           {data} :
         </Typography>
-        <Typography style={{ color: "#BF2B03" }}>{value}</Typography>
+        <Typography align="center" style={{ color: "#BF2B03" }}>
+          {value}
+        </Typography>
       </Paper>
     </>
   );

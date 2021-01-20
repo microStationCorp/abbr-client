@@ -3,6 +3,7 @@ import SingleData from "./singleData";
 import { connect } from "react-redux";
 
 const InformationComponent = ({ text, queryKeyword }) => {
+  console.log(queryKeyword);
   return (
     <>
       <Grid item xs={8}>
@@ -14,10 +15,10 @@ const InformationComponent = ({ text, queryKeyword }) => {
             padding: "5px",
           }}
         >
-          <Typography align="center"> {text}</Typography>
+          <Typography align="center">{text}</Typography>
           {queryKeyword ? (
             <Typography align="center" style={{ fontWeight: "bold" }}>
-              {queryKeyword}
+              "{queryKeyword}"
             </Typography>
           ) : null}
         </Paper>
@@ -30,11 +31,24 @@ const ResultData = ({ firstLoad, isLoading, queryResult, queryKeyword }) => {
   return firstLoad ? (
     <InformationComponent text="Please search any keyword" />
   ) : isLoading ? (
-    <CircularProgress />
+    <Grid item xs={8}>
+      <Paper
+        variant="elevation"
+        elevation={3}
+        style={{
+          margin: "5px 0px",
+          padding: "5px",
+        }}
+      >
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <CircularProgress />
+        </div>
+      </Paper>
+    </Grid>
   ) : queryResult.length === 0 ? (
     <InformationComponent
       text="no such keyword present"
-      keyword={queryKeyword}
+      queryKeyword={queryKeyword}
     />
   ) : (
     <>
