@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/abbr-client/static/js/main.951d4365.chunk.js",
-    "main.js.map": "/abbr-client/static/js/main.951d4365.chunk.js.map",
+    "main.js": "/abbr-client/static/js/main.c317f5c9.chunk.js",
+    "main.js.map": "/abbr-client/static/js/main.c317f5c9.chunk.js.map",
     "runtime-main.js": "/abbr-client/static/js/runtime-main.12c6e75c.js",
     "runtime-main.js.map": "/abbr-client/static/js/runtime-main.12c6e75c.js.map",
-    "static/js/2.86ff2c4a.chunk.js": "/abbr-client/static/js/2.86ff2c4a.chunk.js",
-    "static/js/2.86ff2c4a.chunk.js.map": "/abbr-client/static/js/2.86ff2c4a.chunk.js.map",
+    "static/js/2.8e74e822.chunk.js": "/abbr-client/static/js/2.8e74e822.chunk.js",
+    "static/js/2.8e74e822.chunk.js.map": "/abbr-client/static/js/2.8e74e822.chunk.js.map",
     "index.html": "/abbr-client/index.html",
-    "static/js/2.86ff2c4a.chunk.js.LICENSE.txt": "/abbr-client/static/js/2.86ff2c4a.chunk.js.LICENSE.txt"
+    "static/js/2.8e74e822.chunk.js.LICENSE.txt": "/abbr-client/static/js/2.8e74e822.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.12c6e75c.js",
-    "static/js/2.86ff2c4a.chunk.js",
-    "static/js/main.951d4365.chunk.js"
+    "static/js/2.8e74e822.chunk.js",
+    "static/js/main.c317f5c9.chunk.js"
   ]
 }
