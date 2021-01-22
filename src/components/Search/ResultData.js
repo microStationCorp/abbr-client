@@ -3,7 +3,6 @@ import SingleData from "./singleData";
 import { connect } from "react-redux";
 
 const InformationComponent = ({ text, queryKeyword }) => {
-  console.log(queryKeyword);
   return (
     <>
       <Grid item xs={8}>

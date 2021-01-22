@@ -1,10 +1,19 @@
 import { Grid, TextField, Button } from "@material-ui/core";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { getQueryResult } from "../redux/actions/action";
+import { getQueryResult } from "../../redux/actions/action";
 
 const SearchForm = ({ getQueryResult }) => {
   const [keyword, setKeyword] = useState("");
+  const [isDisable, setDisable] = useState(true);
+
+  useEffect(() => {
+    if (keyword !== "") {
+      setDisable(false);
+    } else {
+      setDisable(true);
+    }
+  }, [keyword]);
 
   const handleSearchButton = () => {
     getQueryResult({
@@ -32,6 +41,7 @@ const SearchForm = ({ getQueryResult }) => {
               variant="contained"
               color="primary"
               onClick={handleSearchButton}
+              disabled={isDisable}
             >
               Search
             </Button>
