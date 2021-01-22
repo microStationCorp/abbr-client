@@ -52,6 +52,9 @@ const ResultData = ({ firstLoad, isLoading, queryResult, queryKeyword }) => {
   ) : (
     <>
       <Grid item xs={8}>
+        <Grid item>
+          <Typography>Search Result for : "{queryKeyword}"</Typography>
+        </Grid>
         {queryResult.map((qr) => {
           return (
             <Grid item key={qr._id}>
