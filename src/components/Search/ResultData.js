@@ -1,30 +1,7 @@
 import { Grid, Paper, Typography, CircularProgress } from "@material-ui/core";
 import SingleData from "./singleData";
 import { connect } from "react-redux";
-
-const InformationComponent = ({ text, queryKeyword }) => {
-  return (
-    <>
-      <Grid item xs={8}>
-        <Paper
-          variant="elevation"
-          elevation={3}
-          style={{
-            margin: "5px 0px",
-            padding: "5px",
-          }}
-        >
-          <Typography align="center">{text}</Typography>
-          {queryKeyword ? (
-            <Typography align="center" style={{ fontWeight: "bold" }}>
-              "{queryKeyword}"
-            </Typography>
-          ) : null}
-        </Paper>
-      </Grid>
-    </>
-  );
-};
+import InformationComponent from "../InformationComponent";
 
 const ResultData = ({ firstLoad, isLoading, queryResult, queryKeyword }) => {
   return firstLoad ? (
@@ -69,10 +46,10 @@ const ResultData = ({ firstLoad, isLoading, queryResult, queryKeyword }) => {
 
 const mapStateToProps = (state) => {
   return {
-    firstLoad: state.firstLoad,
-    isLoading: state.isLoading,
-    queryResult: state.queryResult,
-    queryKeyword: state.queryKeyword,
+    firstLoad: state.query.firstLoad,
+    isLoading: state.query.isLoading,
+    queryResult: state.query.queryResult,
+    queryKeyword: state.query.queryKeyword,
   };
 };
 

@@ -16,9 +16,9 @@ export default function FloatButton({ iconName, goto }) {
 
   const onClickHandler = () => {
     if (goto === "add") {
-      history.push("/abbr-client/add");
+      history.push("/add");
     } else {
-      history.push("/abbr-client/");
+      history.push("/");
     }
   };
 

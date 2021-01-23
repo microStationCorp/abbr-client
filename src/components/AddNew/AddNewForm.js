@@ -5,9 +5,13 @@ import {
   makeStyles,
   TextField,
   Typography,
+  CircularProgress,
 } from "@material-ui/core";
 import { mdiMagnify } from "@mdi/js";
+import { useState } from "react";
 import FloatButton from "../FloatButton";
+import { connect } from "react-redux";
+import { addNewAbbr } from "../../redux/actions/action";
 
 const useStyle = makeStyles((theme) => ({
   inputBox: {
@@ -24,10 +28,18 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-export default function AddNewForm() {
+function AddNewForm({ isUploading, addNewAbbr, errorCode, successMsg }) {
+  const [sf, setsf] = useState("");
+  const [ff, setff] = useState("");
   const classes = useStyle();
   const onSubmitHandler = (e) => {
     e.preventDefault();
+    addNewAbbr({
+      shortForm: sf,
+      fullForm: ff,
+    });
+    setff("");
+    setsf("");
   };
   return (
     <>
@@ -43,13 +55,25 @@ export default function AddNewForm() {
           </Typography>
 
           <form onSubmit={onSubmitHandler}>
+            {errorCode ? (
+              <FormGroup className={classes.formGroup}>
+                <Typography color="error">{errorCode}</Typography>
+              </FormGroup>
+            ) : null}
+            {successMsg ? (
+              <FormGroup className={classes.formGroup}>
+                <Typography color="primary">{successMsg}</Typography>
+              </FormGroup>
+            ) : null}
+
             <FormGroup className={classes.formGroup}>
               <TextField
                 className={classes.inputBox}
                 required
                 variant="outlined"
-                // fullWidth
                 label="Short Form"
+                value={sf}
+                onChange={(e) => setsf(e.target.value)}
               />
             </FormGroup>
             <FormGroup className={classes.formGroup}>
@@ -57,14 +81,21 @@ export default function AddNewForm() {
                 className={classes.inputBox}
                 required
                 variant="outlined"
-                fullWidth
                 label="Full Form"
+                value={ff}
+                onChange={(e) => setff(e.target.value)}
               />
             </FormGroup>
             <FormGroup className={classes.formGroup}>
-              <Button type="submit" variant="contained" color="primary">
-                Add
-              </Button>
+              {isUploading ? (
+                <Button type="submit" variant="contained" color="primary">
+                  <CircularProgress color="inherit" />
+                </Button>
+              ) : (
+                <Button type="submit" variant="contained" color="primary">
+                  Add
+                </Button>
+              )}
             </FormGroup>
           </form>
         </Container>
@@ -73,3 +104,12 @@ export default function AddNewForm() {
     </>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    isUploading: state.upload.isUploading,
+    errorCode: state.upload.errorCode,
+    successMsg: state.upload.successMsg,
+  };
+};
+export default connect(mapStateToProps, { addNewAbbr })(AddNewForm);
