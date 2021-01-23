@@ -11,12 +11,12 @@ function App() {
     <>
       <Provider store={store}>
         <CssBaseline />
-        <Router>
+        <Router basename="/abbr-client/">
           <Switch>
-            <Route path="/abbr-client/add">
+            <Route path="/add">
               <AddNewForm />
             </Route>
-            <Route exact path="/abbr-client/">
+            <Route exact path="/">
               <SearchPage />
             </Route>
             <Route path="*">
