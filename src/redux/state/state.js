@@ -11,3 +11,11 @@ export const uploadState = {
   successMsg: null,
   errorCode: null,
 };
+
+export const adminState = {
+  token: localStorage.getItem("token"),
+  username: null,
+  isAdminLoading: false,
+  isAuthenticated: false,
+  errorMsg: null,
+};

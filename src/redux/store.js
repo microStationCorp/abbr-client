@@ -1,5 +1,5 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
-import { abbrReducer, uploadReducer } from "./reducer/reducer";
+import { abbrReducer, adminReducer, uploadReducer } from "./reducer/reducer";
 import thunk from "redux-thunk";
 
 const middleware = [thunk];
@@ -8,6 +8,7 @@ const store = createStore(
   combineReducers({
     query: abbrReducer,
     upload: uploadReducer,
+    admin: adminReducer,
   }),
   compose(
     applyMiddleware(...middleware),
