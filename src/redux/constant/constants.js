@@ -8,6 +8,7 @@ export const ADMIN_LOADING = "ADMIN_LOADING";
 export const ADMIN_LOADED = "ADMIN_LOADED";
 export const ADMIN_AUTH_ERROR = "ADMIN_AUTH_ERROR";
 
+export const LOGIN_PROCESSING = "LOGIN_PROCESSING";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILED = "LOGIN_FAILED";
 export const LOG_OUT = "LOG_OUT";

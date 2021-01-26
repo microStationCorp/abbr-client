@@ -4,11 +4,16 @@ import {
   ADMIN_LOADED,
   ADMIN_LOADING,
   LOGIN_FAILED,
+  LOGIN_PROCESSING,
   LOGIN_SUCCESS,
   LOG_OUT,
 } from "../constant/constants";
 
 export const loginAction = ({ username, password }) => (dispatch) => {
+  dispatch({
+    type: LOGIN_PROCESSING,
+  });
+
   //headers
   const config = {
     headers: {

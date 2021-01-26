@@ -9,6 +9,7 @@ import {
   GET_DATA,
   ITEM_LOADING,
   LOGIN_FAILED,
+  LOGIN_PROCESSING,
   LOGIN_SUCCESS,
   LOG_OUT,
 } from "../constant/constants";
@@ -73,6 +74,11 @@ export const uploadReducer = (state = uploadState, action) => {
 export const adminReducer = (state = adminState, action) => {
   switch (action.type) {
     case ADMIN_LOADING:
+      return {
+        ...state,
+        isAdminLoading: true,
+      };
+    case LOGIN_PROCESSING:
       return {
         ...state,
         isAdminLoading: true,

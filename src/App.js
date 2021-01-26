@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AddNewForm from "./components/AddNew/AddNewForm";
 import SearchPage from "./components/Search/SearchPage";
 import ErrorPage from "./components/Error/ErrorPage";
+import AdminPage from "./components/Admin/AdminPage";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           <Switch>
             <Route path="/add">
               <AddNewForm />
+            </Route>
+            <Route path="/admin">
+              <AdminPage />
             </Route>
             <Route exact path="/">
               <SearchPage />
