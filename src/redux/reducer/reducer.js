@@ -104,9 +104,11 @@ export const adminReducer = (state = adminState, action) => {
       localStorage.setItem("token", action.payload.token);
       return {
         ...state,
+        token: action.payload.token,
         isAuthenticated: true,
         isAdminLoading: false,
         username: action.payload.user.username,
+        errorMsg: null,
       };
     case LOGIN_FAILED:
       return {
